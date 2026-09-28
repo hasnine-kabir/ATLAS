@@ -1,0 +1,59 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and mutation
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+.mutmut-cache/
+cosmic-ray.sqlite
+cosmic-ray.json
+
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+
+# Sensitive data and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+audit.db
+*.db
+
+# User data and audio recordings (personal privacy)
+tests/fixtures/audio/*.wav
+tests/fixtures/audio/*.pcm
+debug_audio/
+*.png
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

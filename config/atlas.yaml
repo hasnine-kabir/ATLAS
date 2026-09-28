@@ -1,0 +1,114 @@
+assistant:
+  name: Atlas
+  address_as: Hasnine
+  language: en
+  follow_up_window_s: 5
+  confirm_timeout_s: 8
+
+audio:
+  input_device: default
+  output_device: default
+  sample_rate: 16000
+  save_debug_audio: false
+  debug_audio_retention_days: 3
+
+wake:
+  engine: openwakeword
+  model: atlas
+  threshold: 0.6
+  cooldown_s: 1.0
+
+stt:
+  engine: faster-whisper
+  model: small.en
+  compute_type: int8
+  device: auto
+
+tts:
+  enabled: true
+  engine: piper
+  voice: en_US-lessac-medium
+  fallback: sapi
+  rate: 1.0
+
+llm:
+  provider: gemini
+  model: auto
+  timeout_s: 8
+  max_spoken_sentences: 2
+  api_key_source: env
+
+apps:
+  notepad: notepad.exe
+  calculator: calc.exe
+  calc: calc.exe
+  paint: mspaint.exe
+  chrome: chrome.exe
+  google chrome: chrome.exe
+  browser: chrome.exe
+  firefox: firefox.exe
+  edge: msedge.exe
+  microsoft edge: msedge.exe
+  word: winword.exe
+  microsoft word: winword.exe
+  excel: excel.exe
+  microsoft excel: excel.exe
+  powerpoint: powerpnt.exe
+  microsoft powerpoint: powerpnt.exe
+  outlook: outlook.exe
+  onenote: onenote.exe
+  teams: teams.exe
+  task manager: taskmgr.exe
+  settings: "ms-settings:"
+  control panel: control.exe
+  cmd: cmd.exe
+  command prompt: cmd.exe
+  powershell: powershell.exe
+  snipping tool: snippingtool.exe
+  vs code: code.cmd
+  code: code.cmd
+  spotify: spotify.exe
+  discord: discord.exe
+  vlc: vlc.exe
+  obs: obs64.exe
+
+sites:
+  google: https://google.com
+  youtube: https://youtube.com
+  github: https://github.com
+  gmail: https://mail.google.com
+  facebook: https://facebook.com
+  reddit: https://reddit.com
+  chatgpt: https://chat.openai.com
+  claude: https://claude.ai
+  stack overflow: https://stackoverflow.com
+
+search:
+  engine: "https://www.google.com/search?q={query}"
+
+files:
+  allowed_roots:
+    - "%USERPROFILE%\\Desktop"
+    - "%USERPROFILE%\\Downloads"
+    - "%USERPROFILE%\\Documents"
+    - "%USERPROFILE%\\Pictures"
+    - "%USERPROFILE%\\Videos"
+  notes_dir: "%USERPROFILE%\\Documents\\AtlasNotes"
+  screenshots_dir: "%USERPROFILE%\\Pictures\\AtlasScreenshots"
+
+scripts: {}
+
+hotkeys:
+  push_to_talk: "ctrl+alt+space"
+  mute_toggle: "ctrl+alt+m"
+
+weather:
+  default_city: Dhaka
+
+safety:
+  blocked_tools:
+    - shell
+    - registry
+    - install
+    - payments
+  audit_log: "%APPDATA%\\Atlas\\audit.db"
