@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "src/atlas/tools/apps.py"
+timeout = 10.0
+excluded-modules = []
+test-command = ".venv/Scripts/python.exe -m pytest tests/unit/test_apps.py -x -q"
+
+[cosmic-ray.distributor]
+name = "local"

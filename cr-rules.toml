@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "src/atlas/nlu/rules.py"
+timeout = 10.0
+excluded-modules = []
+test-command = ".venv/Scripts/python.exe -m pytest tests/unit/test_rules.py tests/unit/test_normalize.py -x -q"
+
+[cosmic-ray.distributor]
+name = "local"
